@@ -3,12 +3,14 @@ package config
 import "github.com/BurntSushi/toml"
 
 type Config struct {
-	BindAddr    string `toml:"bind_addr"`
-	LogLevel    string `toml:"log_level"`
-	DatabaseURL string `toml:"database_url"`
-	SessionKey  string `toml:"session_key"`
-	MigPath     string `toml:"mig_path"`
-	Root        string `toml:"root"`
+	BindAddr          string `toml:"bind_addr"`
+	LogLevel          string `toml:"log_level"`
+	DatabaseURL       string `toml:"database_url"`
+	SessionKey        string `toml:"session_key"`
+	MigPath           string `toml:"mig_path"`
+	Root              string `toml:"root"`
+	WarehouseGrpcHost string `toml:"warehouse_grpc_host"`
+	WarehouseGrpcPort string `toml:"warehouse_grpc_port"`
 }
 
 func NewConfig() *Config {

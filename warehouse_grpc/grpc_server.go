@@ -2,7 +2,6 @@ package warehouse_grpc
 
 import (
 	"context"
-	"google.golang.org/grpc"
 )
 
 type GRPCServer struct{}
@@ -16,6 +15,6 @@ func (s *GRPCServer) Add(ctx context.Context, req *AddRequest) (*AddResponce, er
 	return &AddResponce{Result: req.GetX() + req.GetY()}, nil
 }
 
-func (s *GRPCServer) TakeDelivery(ctx context.Context, in *Delivery, opts ...grpc.CallOption) (*Responce, error) {
+func (s *GRPCServer) TakeDelivery(ctx context.Context, delivery *Delivery) (*Responce, error) {
 	return &Responce{Anc: "good"}, nil
 }
