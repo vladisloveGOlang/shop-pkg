@@ -21,7 +21,7 @@ func NewConfig() *Config {
 func DecodeConfigFromRelativePath(path string) (*Config, error) {
 	config := NewConfig()
 
-	_, err := toml.Decode(path, config)
+	_, err := toml.DecodeFile(path, config)
 	if err != nil {
 		return nil, err
 	}
