@@ -19,8 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Warehouse_TakeDelivery_FullMethodName = "/http.Warehouse/TakeDelivery"
-	Warehouse_Add_FullMethodName          = "/http.Warehouse/Add"
+	Warehouse_TakeDelivery_FullMethodName = "/api.Warehouse/TakeDelivery"
+	Warehouse_Add_FullMethodName          = "/api.Warehouse/Add"
 )
 
 // WarehouseClient is the client API for Warehouse service.
@@ -142,7 +142,7 @@ func _Warehouse_Add_Handler(srv interface{}, ctx context.Context, dec func(inter
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Warehouse_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "http.Warehouse",
+	ServiceName: "api.Warehouse",
 	HandlerType: (*WarehouseServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

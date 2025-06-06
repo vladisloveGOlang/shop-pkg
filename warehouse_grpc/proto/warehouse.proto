@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option go_package = "pkg/warehouse_grpc";
+
+package api;
+
+service Warehouse {
+  rpc TakeDelivery(Delivery) returns (Responce){
+      }
+  rpc Add(AddRequest) returns (AddResponce){
+      }
+}
+
+message AddRequest {
+  int32 x =1;
+  int32 y =2;
+}
+
+message AddResponce {
+  int32 result=1;
+}
+
+message Good {
+  string id = 1;
+  string name = 2;
+  string price = 3;
+  string amount = 4;
+}
+
+message Delivery {
+  repeated Good goods = 1;  // Delivery - это массив Good
+}
+
+message Responce {
+  string err = 1;
+  string anc = 2;
+}

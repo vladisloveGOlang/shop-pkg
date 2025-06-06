@@ -298,13 +298,13 @@ const file_warehouse_proto_rawDesc = "" +
 	"\x05price\x18\x03 \x01(\tR\x05price\x12\x16\n" +
 	"\x06amount\x18\x04 \x01(\tR\x06amount\"+\n" +
 	"\bDelivery\x12\x1f\n" +
-	"\x05goods\x18\x01 \x03(\v2\t.http.GoodR\x05goods\".\n" +
+	"\x05goods\x18\x01 \x03(\v2\t.api.GoodR\x05goods\".\n" +
 	"\bResponce\x12\x10\n" +
 	"\x03err\x18\x01 \x01(\tR\x03err\x12\x10\n" +
 	"\x03anc\x18\x02 \x01(\tR\x03anc2g\n" +
 	"\tWarehouse\x12.\n" +
-	"\fTakeDelivery\x12\r.http.Delivery\x1a\r.http.Responce\"\x00\x12*\n" +
-	"\x03Add\x12\x0f.http.AddRequest\x1a\x10.http.AddResponce\"\x00B\x14Z\x12pkg/warehouse_grpcb\x06proto3"
+	"\fTakeDelivery\x12\r.api.Delivery\x1a\r.api.Responce\"\x00\x12*\n" +
+	"\x03Add\x12\x0f.api.AddRequest\x1a\x10.api.AddResponce\"\x00B\x14Z\x12pkg/warehouse_grpcb\x06proto3"
 
 var (
 	file_warehouse_proto_rawDescOnce sync.Once
@@ -320,18 +320,18 @@ func file_warehouse_proto_rawDescGZIP() []byte {
 
 var file_warehouse_proto_msgTypes = make([]protoimpl.MessageInfo, 5)
 var file_warehouse_proto_goTypes = []any{
-	(*AddRequest)(nil),  // 0: http.AddRequest
-	(*AddResponce)(nil), // 1: http.AddResponce
-	(*Good)(nil),        // 2: http.Good
-	(*Delivery)(nil),    // 3: http.Delivery
-	(*Responce)(nil),    // 4: http.Responce
+	(*AddRequest)(nil),  // 0: api.AddRequest
+	(*AddResponce)(nil), // 1: api.AddResponce
+	(*Good)(nil),        // 2: api.Good
+	(*Delivery)(nil),    // 3: api.Delivery
+	(*Responce)(nil),    // 4: api.Responce
 }
 var file_warehouse_proto_depIdxs = []int32{
-	2, // 0: http.Delivery.goods:type_name -> http.Good
-	3, // 1: http.Warehouse.TakeDelivery:input_type -> http.Delivery
-	0, // 2: http.Warehouse.Add:input_type -> http.AddRequest
-	4, // 3: http.Warehouse.TakeDelivery:output_type -> http.Responce
-	1, // 4: http.Warehouse.Add:output_type -> http.AddResponce
+	2, // 0: api.Delivery.goods:type_name -> api.Good
+	3, // 1: api.Warehouse.TakeDelivery:input_type -> api.Delivery
+	0, // 2: api.Warehouse.Add:input_type -> api.AddRequest
+	4, // 3: api.Warehouse.TakeDelivery:output_type -> api.Responce
+	1, // 4: api.Warehouse.Add:output_type -> api.AddResponce
 	3, // [3:5] is the sub-list for method output_type
 	1, // [1:3] is the sub-list for method input_type
 	1, // [1:1] is the sub-list for extension type_name
